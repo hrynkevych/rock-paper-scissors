@@ -24,8 +24,9 @@ This is the backend for the "Rock-Paper-Scissors" game built with TypeScript and
 The application follows a simple and modular structure, follows SOLID principles. The architecture ensures separation of concerns between the WebSocket handling and game logic. 
 
 - **GameModule**: Main module to tie together services and controllers.
-- **GameService**: Handles all game logic.
-- **WebSocketController**: Manages WebSocket communication. Handles WebSocket events for player actions (e.g., joining, making a move).
+- **GameLogicService**: Handles game logic, including result calculation.
+- **GamePlayersService**: Manages player state.
+- **GameWebSocketController**: Manages WebSocket communication. Handles WebSocket events for player actions (e.g., joining, making a move).
 
 ## Running the Project
 
@@ -48,7 +49,7 @@ The server will start on port 3001, and the WebSocket will listen on port 3005.
 
 ## Running Tests
 
-This project includes unit tests for the game logic service using Jest.
+This project includes unit tests for the game logic service and game players management using Jest.
 
 npm run test
 

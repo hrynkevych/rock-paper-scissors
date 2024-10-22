@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
-import { GameService } from './game-logic.service';
-import { WebSocketController } from '../web-socket/web-socket.controller';
+import { GameLogicService } from './services/game-logic.service';
+import { GamePlayersService } from './services/game-players.service';
+import { GameWebSocketController } from './controller/game-websocket.controller';
 
 @Module({
-  providers: [GameService, WebSocketController],
+  providers: [ GameLogicService, GamePlayersService, GameWebSocketController],
 })
 export class GameModule {}
